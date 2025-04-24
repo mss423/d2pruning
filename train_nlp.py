@@ -1047,7 +1047,7 @@ def main():
     #     # metric = load_metric("glue", args.task_name)
     #     metric = load_metric(args.task_name)
     # else:
-    metric = evaluate.load(“accuracy”)# load_metric("accuracy")
+    metric = evaluate.load("accuracy")# load_metric("accuracy")
     best_metric = -1
     best_test_metric = -1
     plateau_counter = 0
