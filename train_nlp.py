@@ -27,7 +27,7 @@ import numpy as np
 import torch
 
 import datasets
-from datasets import load_dataset, load_metric, Dataset, DatasetDict
+from datasets import load_dataset, evaluate, Dataset, DatasetDict
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 from core.training import Trainer, TrainingDynamicsLogger
@@ -1047,7 +1047,7 @@ def main():
     #     # metric = load_metric("glue", args.task_name)
     #     metric = load_metric(args.task_name)
     # else:
-    metric = load_metric("accuracy")
+    metric = evaluate.load(“accuracy”)# load_metric("accuracy")
     best_metric = -1
     best_test_metric = -1
     plateau_counter = 0
