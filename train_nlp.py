@@ -598,7 +598,7 @@ def main():
             data_files["validation"] = args.validation_file
         extension = (args.train_file if args.train_file is not None else args.valid_file).split(".")[-1]
         if extension == "tsv":
-            raw_datasets = load_dataset(extension, data_files=data_files, sep="\t")
+            raw_datasets = load_dataset("csv", data_files=data_files, sep="\t")
         else:
             raw_datasets = load_dataset(extension, data_files=data_files)
     # See more about loading any type of standard or custom dataset at
