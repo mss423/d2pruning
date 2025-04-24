@@ -27,7 +27,8 @@ import numpy as np
 import torch
 
 import datasets
-from datasets import load_dataset, evaluate, Dataset, DatasetDict
+from datasets import load_dataset, Dataset, DatasetDict
+import evaluate
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 from core.training import Trainer, TrainingDynamicsLogger
