@@ -39,8 +39,9 @@ import transformers
 from accelerate import Accelerator
 from accelerate.utils import set_seed
 from huggingface_hub import Repository
+from torch.optim import AdamW
 from transformers import (
-    AdamW,
+    # AdamW,
     # AutoConfig,
     # AutoModelForSequenceClassification,
     # AutoTokenizer,
